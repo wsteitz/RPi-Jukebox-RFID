@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 
 import os.path
 from Reader import get_devices
@@ -9,7 +9,7 @@ i = 0
 print("Choose the reader from list")
 for dev in devices:
     print(i, dev.name)
-	i += 1
+    i += 1
 
 dev_id = int(raw_input('Device Number: '))
 
