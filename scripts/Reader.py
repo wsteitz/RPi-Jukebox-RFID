@@ -16,15 +16,16 @@
 #     and this required to check "if" the device is a keyboard.
 
 import string
-#import csv
 import os.path
 import sys
 
 from evdev import InputDevice, categorize, ecodes, list_devices
 from select import select
 
+
 def get_devices():
     return [InputDevice(fn) for fn in list_devices()]
+
 
 class Reader:
     reader = None
@@ -59,4 +60,3 @@ class Reader:
                 #print( keys[ event.code ] )
                 key = ecodes.KEY[ event.code ]
         return stri[:-1]
-        
